@@ -6,10 +6,11 @@
     
     int counter = 0;
     
-    for (NSUInteger i = array.count - 1; i > 0; i--) {
-        for (int j = 0; j < i; j++) {
+    for (int i = 0; i < array.count - 1; i++) {
+        
+        for(int j = i + 1; j < array.count; j++) {
             
-            if ((array[i].intValue - array[j].intValue) == number.intValue) {
+            if (ABS((array[i].intValue - array[j].intValue)) == number.intValue) {
                 counter++;
             }
         }
